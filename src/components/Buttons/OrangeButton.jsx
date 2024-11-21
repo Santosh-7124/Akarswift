@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function OrangeButton({ name, link }) {
   return (
-    <Link to="/" className="orange-button">
+    <Link to={link} className="orange-button">
       {name}
     </Link>
   );
