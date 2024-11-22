@@ -478,14 +478,13 @@ header nav .active-nav-link:hover {
   align-items: center;
   justify-content: center;
   gap: 36px;
-  background: url("./src/assets/Home/Mission\ and\ Vision\ Background.png")
-    no-repeat center center;
+  background: url("/Mission and Vision Background.png") no-repeat center center;
   background-size: cover;
 }
 
 .about-mission-vision {
-  background: url("./src/assets/About/Mission\ and\ Vision\ Background.png")
-    no-repeat center center;
+  background: url("/About Page Mission and Vision Background.png") no-repeat
+    center center;
   background-size: cover;
 }
 
@@ -1015,8 +1014,7 @@ header nav .active-nav-link:hover {
   flex-direction: column;
   gap: 24px;
   border-radius: 4px;
-  background: url("./src/assets/Home/Home\ Contact\ Background.png") no-repeat
-    center center;
+  background: url("/Home Contact Background.png") no-repeat center center;
   background-size: cover;
 }
 
