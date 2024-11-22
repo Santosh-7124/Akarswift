@@ -273,7 +273,7 @@ header nav .active-nav-link:hover {
     opacity: 0;
   }
   to {
-    transform: translateY(30%);
+    transform: translateY(20%);
     opacity: 1;
   }
 }
@@ -286,8 +286,8 @@ header nav .active-nav-link:hover {
 }
 
 #globe-background {
-  width: 100%;
-  height: 200%;
+  width: 120%;
+  height: 300%;
   border-radius: 50%;
   position: absolute;
   left: 50%;
@@ -478,7 +478,8 @@ header nav .active-nav-link:hover {
   align-items: center;
   justify-content: center;
   gap: 36px;
-  background: url("./src/assets/Home/Mission\ and\ Vision\ Background.png") no-repeat center center;
+  background: url("./src/assets/Home/Mission\ and\ Vision\ Background.png")
+    no-repeat center center;
   background-size: cover;
 }
 
@@ -593,6 +594,25 @@ header nav .active-nav-link:hover {
   position: relative;
 }
 
+.home-products-left-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 4px;
+  border-radius: 4px;
+  background: linear-gradient(
+    176deg,
+    rgba(197, 102, 46, 0.02) 46.77%,
+    rgba(17, 17, 17, 0.7) 81.34%
+  );
+  z-index: 1;
+  transition: all 0.3s;
+  border-radius: 4px;
+}
+
 .home-products-left-img img {
   width: 100%;
   max-height: 442px;
@@ -610,6 +630,7 @@ header nav .active-nav-link:hover {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  z-index: 2;
 }
 
 .home-products-right {
@@ -822,7 +843,205 @@ header nav .active-nav-link:hover {
   box-shadow: 0px 4px 30px 0px rgba(197, 102, 46, 0.5);
 }
 
-.north-america-button:hover {
+.why-work-with-us {
+  width: 100%;
+  display: flex;
+  padding: 80px 160px;
+  align-items: flex-start;
+  gap: 120px;
+  align-self: stretch;
+  background: #111;
+}
+
+.why-work-with-us-heading {
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.why-work-with-us-heading .heading {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  align-self: stretch;
+}
+
+.why-work-with-us-heading .heading section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.why-work-with-us-heading .heading section h2 {
+  width: 100%;
+  color: #fff;
+  text-shadow: 0px 4px 40px rgba(255, 255, 255, 0.3);
+  font-family: Urbanist;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.why-work-with-us-heading .heading section p {
+  width: 100%;
+  color: #d0d0d0;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.why-work-with-us-heading img {
+  width: 120.948px;
+  height: 113.002px;
+  object-fit: none;
+}
+
+.why-work-with-us-container {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.why-work-with-us-card {
+  width: 100%;
+  min-height: 240px;
+  display: flex;
+  padding: 20px 17px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 4px;
+  border-bottom: 1px solid #000;
+  background: #111;
+  transition: all 0.3s;
+}
+
+.why-work-with-us-card:hover {
+  background: #f06f22;
+}
+
+.why-work-with-us-card .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: stretch;
+}
+
+.why-work-with-us-card .text h3 {
+  color: #f8f8f8;
+  font-family: Urbanist;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.why-work-with-us-card .text p {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.why-work-with-us-card .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.why-work-with-us-card .image img {
+  height: 120px;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+
+.why-work-with-us-card .image .main-img {
+  opacity: 1;
+}
+
+.why-work-with-us-card .image .hover-img {
+  position: absolute;
+  opacity: 0;
+}
+
+.why-work-with-us-card:hover .main-img {
+  opacity: 0;
+}
+
+.why-work-with-us-card:hover .hover-img {
+  opacity: 1;
+}
+
+.home-contact {
+  width: 100%;
+  display: flex;
+  padding: 80px 160px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #111;
+}
+
+.home-contact-container {
+  width: 100%;
+  height: 368px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 4px;
+  background: url("./src/assets/Home/Home\ Contact\ Background.png") no-repeat
+    center center;
+  background-size: cover;
+}
+
+.home-contact-container h2 {
+  color: #fff;
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.home-contact-container h2 span {
+  background: linear-gradient(91deg, #3a1600 14.4%, #da5200 94.5%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Urbanist;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.home-contact-container .transparent-button{
+background: #111;
+}
+
+.home-contact-container .transparent-button:hover{
+  scale: 1.2;
 }
 
 /* Contact */

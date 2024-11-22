@@ -6,6 +6,8 @@ import Markets from "./Home/Markets";
 import MissionVision from "./Home/MissionVision";
 import Products from "./Home/Products";
 import Continents from "./Home/Continents";
+import Work from "./Home/Work";
+import Contact from "./Home/Contact";
 
 function Home() {
   return (
@@ -17,6 +19,8 @@ function Home() {
       <MissionVision />
       <Products />
       <Continents />
+      <Work />
+      <Contact />
     </>
   );
 }
