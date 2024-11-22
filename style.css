@@ -332,7 +332,7 @@ header nav .active-nav-link:hover {
   overflow: hidden;
   display: inline-flex;
   align-items: center;
-  animation: marquee 10s linear infinite;
+  animation: marquee 20s linear infinite;
 }
 
 @keyframes marquee {
@@ -1036,11 +1036,11 @@ header nav .active-nav-link:hover {
   line-height: normal;
 }
 
-.home-contact-container .transparent-button{
-background: #111;
+.home-contact-container .transparent-button {
+  background: #111;
 }
 
-.home-contact-container .transparent-button:hover{
+.home-contact-container .transparent-button:hover {
   scale: 1.2;
 }
 
@@ -1406,4 +1406,212 @@ form button:hover {
 .contact-info-set-button:hover {
   border: 1px solid var(--Orange-orange-800, #6c3819);
   background: rgba(83, 43, 19, 0.2);
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  width: 100%;
+  padding: 80px 160px 40px 160px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  background: #121212;
+}
+
+.footer-up {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  align-self: stretch;
+}
+
+.footer-up .footer-line {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(17, 17, 17, 0.2) 5.5%,
+    rgba(197, 102, 46, 0.2) 54.5%,
+    rgba(17, 17, 17, 0.2) 100%
+  );
+}
+
+.footer-up-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.footer-up-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.footer-up-left section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo {
+  width: 64px;
+  object-fit: cover;
+}
+
+.footer-name {
+  width: 160px;
+  object-fit: cover;
+}
+
+.footer-up-left p {
+  width: 340px;
+  color: #f8f8f8;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.footer-up-right {
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+  align-self: stretch;
+}
+
+.footer-links-internal {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.footer-links-internal section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.footer-links-internal section a {
+  text-decoration: none;
+  color: #cdcdcd;
+  font-family: Urbanist;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.footer-links-internal section a:hover {
+  color: #fff;
+}
+
+.footer-links-external {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.footer-links-external a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.footer-links-external a img {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+
+.footer-links-external a p {
+  color: #cdcdcd;
+  font-family: Urbanist;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: all 0.3s;
+}
+
+.footer-links-external a:hover img {
+  scale: 1.1;
+}
+
+.footer-links-external a:hover p {
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.footer-down {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.footer-down .footer-line {
+  width: 100%;
+  height: 1px;
+  opacity: 0.2;
+  background: #7bb9fc;
+}
+
+.footer-down-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.footer-down-container p {
+  color: rgba(248, 248, 248, 0.5);
+  font-family: Urbanist;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.footer-socials a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-socials a img {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+
+.footer-socials a:hover img {
+  scale: 1.2;
 }
