@@ -1048,6 +1048,277 @@ header nav .active-nav-link:hover {
   scale: 1.2;
 }
 
+/* Product Page */
+
+.primary-banner {
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: #111;
+}
+
+.primary-banner-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.primary-banner-object {
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 40%;
+  object-fit: cover;
+
+  animation: slideUpObject 1s ease-out forwards;
+}
+
+@keyframes slideUpObject {
+  0% {
+    bottom: -50%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+.primary-banner h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -100%);
+  text-align: center;
+  font-family: Urbanist;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 64px;
+  background: linear-gradient(91deg, #f8f8f8 80%, #111);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  animation: fadeInText 1.5s ease-out 1s forwards;
+}
+
+.primary-banner h1 span {
+  background: linear-gradient(102deg, #fbbd99 50%, #121212);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Urbanist;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 64px;
+}
+
+.product-card {
+  width: 100%;
+  display: flex;
+  padding: 80px 160px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 64px;
+  background: #111;
+}
+
+.product-card-text-and-img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  align-self: stretch;
+}
+
+.product-card .reverse{
+  flex-direction: row-reverse;
+}
+
+.product-card-text {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.product-card-text h2 {
+  color: #fff;
+  text-shadow: 0px 4px 40px rgba(255, 255, 255, 0.3);
+  font-family: Urbanist;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.product-card-text-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  align-self: stretch;
+}
+
+.product-card-text-container .heading {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.product-card-text-container .heading h3 {
+  color: #f06f22;
+  font-family: Urbanist;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.product-card-text-container .heading p {
+  color: #cdcdcd;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.product-card-text-container ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.product-card-text-container ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.product-card-text-container ul li .line {
+  width: 1px;
+  align-self: stretch;
+  background: linear-gradient(0deg, #111 0%, #f06f22 47%, #111 100%);
+  box-shadow: 0px 4px 10px 0px #f06f22;
+}
+
+.product-card-text-container ul li .text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.product-card-text-container ul li .text h4 {
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.product-card-text-container ul li .text p {
+  color: #cdcdcd;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.product-card-img {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+}
+
+.product-card-img img {
+  width: 100%;
+  height: 100%;
+  min-height: 637px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.product-card-features {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 40px;
+}
+
+.product-card-features-card {
+  grid-column: span 2;
+  display: flex;
+  width: 100%;
+  height: 143px;
+  padding: 32px 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 12px;
+  background: #111; 
+  border: 2px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  background-image: linear-gradient(to bottom, #111, #111), /* Inner background */
+    linear-gradient(to top, #C5662E66, #111111); /* Border gradient */
+  box-shadow: 0px 4px 40px 0px rgba(240, 111, 34, 0.13);
+}
+
+
+.product-card-features-card h4 {
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.48px;
+}
+
+.product-card-features-card p {
+  color: #cdcdcd;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.32px;
+}
+
+.product-card-features-card:nth-child(3n + 4):last-child {
+  grid-column: 3 / span 2;
+}
+
+.product-card-features:has(:nth-child(3n + 5):last-child) > :nth-last-child(2) {
+  grid-column: 2 / span 2;
+}
+
 /* Contact */
 
 .secondary-banner {
