@@ -1,5 +1,5 @@
 import React from "react";
-import Background from "../../assets/Contact/Banner Background.png";
+import Background from "../../assets/Banner Background.png";
 import Downline from "../../assets/Banner Down Line.png";
 import Leftline from "../../assets/Banner Left Line.png";
 import Rightline from "../../assets/Banner Right Line.png";

@@ -9,7 +9,8 @@ function Banner() {
     <div className="secondary-banner">
       <img src={Background} className="background" />
       <h1>
-        About <br /> <span>Akarswift Global </span>
+        Join Our
+        <br /> <span> Team</span>
       </h1>
       <img src={Downline} className="banner-down-line1" />
       <img src={Downline} className="banner-down-line2" />
