@@ -105,9 +105,9 @@ function Navbar() {
           <path
             d="M1.63196 10.0704L6.00113 5.7012L10.3703 10.0704M10.3703 1.33203L6.00029 5.7012L1.63196 1.33203"
             stroke="white"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </svg>
       </div>
@@ -137,7 +137,7 @@ function Navbar() {
             </Link>
           ))}
         </nav>
-        <Link className="orange-button">Contact Us</Link>
+        <Link to="/contact" onClick={toggleMobileNav} className="orange-button">Contact Us</Link>
       </div>
     </header>
   );
