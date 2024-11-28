@@ -111,19 +111,7 @@ function Products() {
             <p>{selectedProduct.paragraph}</p>
           </div>
           <section>
-            {products.slice(0, 3).map((product) => (
-              <div
-                key={product.text}
-                className="home-products-card"
-                onClick={() => handleProductClick(product)}
-              >
-                <img src={product.img} alt={product.text} />
-                <p>{product.text}</p>
-              </div>
-            ))}
-          </section>
-          <section>
-            {products.slice(3).map((product) => (
+            {products.map((product) => (
               <div
                 key={product.text}
                 className="home-products-card"

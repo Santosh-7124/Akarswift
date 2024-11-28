@@ -29,9 +29,10 @@ header {
   z-index: 1000;
 }
 
-header section {
+.navbar-img {
   display: flex;
   align-items: flex-end;
+  text-decoration: none;
 }
 
 .navbar-logo {
@@ -931,9 +932,13 @@ header nav .active-nav-link:hover {
   gap: 10px;
   align-self: stretch;
   border-radius: 4px;
-  border-bottom: 1px solid #000;
   background: #111;
   transition: all 0.3s;
+  border: 1px solid transparent;
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  background-image: linear-gradient(to bottom, #111, #111),
+    linear-gradient(to top, #f06f22, #111111 3%);
 }
 
 .why-work-with-us-card:hover {
@@ -1552,7 +1557,7 @@ header nav .active-nav-link:hover {
   gap: 20px;
 }
 
-.careers-card-form .transparent-button{
+.careers-card-form .transparent-button {
   width: 100%;
 }
 
@@ -2126,4 +2131,524 @@ footer {
 
 .footer-socials a:hover img {
   scale: 1.2;
+}
+
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: flex;
+}
+
+@media screen and (max-width: 1200px) {
+  .mobile {
+    display: flex;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+    background: #121212;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  }
+
+  .navbar-logo {
+    width: 40px;
+  }
+
+  .navbar-name {
+    width: 108px;
+  }
+
+  .mobile-navbar-button {
+    display: flex;
+    padding: 6px;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .mobile-navbar-button svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .mobileNavbar {
+    width: 100%;
+    height: calc(100svh - 56px);
+    background: #111;
+    position: fixed;
+    top: 56px;
+    right: 0;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 80px;
+    padding: 40px 20px 20px 20px;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  .activeMobileNavbar {
+    transform: translateX(0);
+    animation: slideIn 0.3s forwards;
+  }
+
+  .nonactiveMobileNavbar {
+    transform: translateX(100%);
+    animation: slideOut 0.3s forwards;
+  }
+
+  .mobileNavbar nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+  }
+
+  .mobileNavbar nav a {
+    color: #fff;
+    font-family: Urbanist;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .mobileNavbar nav .active-nav-link {
+    color: #f06f22;
+  }
+
+  .mobileNavbar .orange-button {
+    width: 100%;
+  }
+
+  /* Home */
+
+  .home-banner {
+    padding: 0;
+  }
+
+  .home-banner-heading-container h1 {
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .home-banner-heading-container h1 span {
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .home-banner-heading-container p {
+    width: 100%;
+    padding: 0px 40px;
+  }
+
+  .banner-ellipse-1 {
+    width: 112px;
+    top: -30px;
+    left: 25px;
+    z-index: -1;
+  }
+
+  .banner-ellipse-2 {
+    width: 112px;
+    bottom: -30px;
+    right: 25px;
+    z-index: -1;
+  }
+
+  .home-banner-globe {
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
+  #banner-globe {
+    height: auto;
+  }
+
+  #globe-background {
+    width: 100%;
+    aspect-ratio: 1/1;
+    height: auto;
+    top: 30%;
+  }
+
+  .s-banner-wrapper {
+    padding: 12px 0px;
+  }
+
+  .s-banner-marquee p {
+    color: #fff;
+    font-family: Urbanist;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -0.32px;
+  }
+
+  .s-banner-marquee img {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+  }
+
+  .section {
+    display: flex;
+    padding: 48px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    align-self: stretch;
+  }
+
+  .section .heading h2 {
+    color: #fff;
+    text-shadow: 0px 4px 40px rgba(255, 255, 255, 0.3);
+    font-family: Urbanist;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .section .heading p {
+    color: #d0d0d0;
+    font-family: Urbanist;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .commitment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+  }
+
+  .commitment-container section {
+    flex-direction: column;
+  }
+
+  .commitment-card img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .commitment-card h3 {
+    color: #f8f8f8;
+    font-family: Urbanist;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .commitment-card p {
+    color: rgba(248, 248, 248, 0.7);
+    font-family: Urbanist;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .markets section {
+    gap: 24px;
+  }
+
+  .markets-card-img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .mission-vision {
+    min-height: auto;
+    padding: 128px 20px;
+    background: url("/Mobile Mission and Vision Background.png") no-repeat
+      center center;
+    background-size: cover;
+  }
+
+  .mission-vision section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .mission-vision section h2 {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 2.88px;
+  }
+
+  .mission-vision section p {
+    width: 100%;
+    color: #fff;
+    font-family: Urbanist;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .home-products-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .home-products-left {
+    width: 100%;
+  }
+
+  .home-products-right {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .home-products-left-img img {
+    height: 319px;
+  }
+
+  .home-products-right .heading h3 {
+    color: #f06f22;
+    font-family: Urbanist;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .home-products-right .heading p {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: Urbanist;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .home-products-right section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .continents-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 60px;
+    align-self: stretch;
+  }
+
+  .continents-map {
+    width: 100%;
+  }
+
+  .continents-info {
+    width: 100%;
+  }
+
+  .continents-info .heading h3 {
+    color: #f06f22;
+    font-family: Urbanist;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .continents-info .heading p {
+    color: #c7c7c7;
+    font-family: Urbanist;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .why-work-with-us {
+    display: flex;
+    padding: 48px 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    align-self: stretch;
+  }
+
+  .why-work-with-us-heading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 64px;
+    align-self: stretch;
+  }
+
+  .why-work-with-us-heading .heading section h2 {
+    color: #fff;
+    text-shadow: 0px 4px 40px rgba(255, 255, 255, 0.3);
+    font-family: Urbanist;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .why-work-with-us-heading .heading section p {
+    color: #d0d0d0;
+    font-family: Urbanist;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .why-work-with-us-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .why-work-with-us-card {
+    display: flex;
+    min-height: 175px;
+    padding: 20px 17px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+  }
+
+  .home-contact {
+    display: flex;
+    padding: 40px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .home-contact-container h2 {
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .home-contact-container h2 span {
+    text-align: center;
+    font-family: Urbanist;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  footer {
+    display: flex;
+    padding: 48px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    align-self: stretch;
+  }
+
+  .footer-up {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    align-self: stretch;
+  }
+
+  .footer-up-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    align-self: stretch;
+  }
+
+  .footer-up-left p {
+    width: 100%;
+  }
+
+  .footer-up-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    align-self: stretch;
+  }
+
+  .footer-links-internal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+  }
+
+  .footer-down-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+  }
 }
