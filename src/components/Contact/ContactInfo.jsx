@@ -1,6 +1,7 @@
 import React from "react";
 import MailIcon from "../../assets/Contact/Mail Icon.svg";
 import LocationIcon from "../../assets/Contact/Location Icon.svg";
+import PhoneIcon from "../../assets/Contact/Phone Icon.svg"
 
 function ContactInfo() {
   return (
@@ -45,7 +46,7 @@ function ContactInfo() {
       <div className="contact-info-set">
         <div className="contact-info-set-heading">
           <div className="contact-info-set-icon">
-            <img src={MailIcon} alt="mail icon" />
+            <img src={PhoneIcon} alt="mail icon" />
           </div>
           <div className="contact-info-set-info">
             <h3>Call Us</h3>

@@ -6,10 +6,11 @@ function Form() {
       <div className="form-container">
         <div className="form-input-divider">
           <div className="form-input">
-            <label>
+            <label htmlFor="firstName">
               First Name <span>*</span>
             </label>
             <input
+              id="firstName"
               type="text"
               name="firstName"
               placeholder="Enter First Name"
@@ -18,10 +19,11 @@ function Form() {
             />
           </div>
           <div className="form-input">
-            <label>
+            <label htmlFor="lastName">
               Last Name <span>*</span>
             </label>
             <input
+              id="lastName"
               type="text"
               name="lastName"
               placeholder="Enter Last Name"
@@ -31,10 +33,11 @@ function Form() {
           </div>
         </div>
         <div className="form-input">
-          <label>
+          <label htmlFor="email">
             Email Address <span>*</span>
           </label>
           <input
+            id="email"
             type="email"
             name="email"
             placeholder="Email address"
@@ -43,10 +46,11 @@ function Form() {
           />
         </div>
         <div className="form-input">
-          <label>
+          <label htmlFor="mobile">
             Mobile Number <span>*</span>
           </label>
           <input
+            id="mobile"
             type="tel"
             name="mobile"
             placeholder="Mobile number"
@@ -55,8 +59,9 @@ function Form() {
           />
         </div>
         <div className="form-input">
-          <label>Message</label>
+          <label htmlFor="message">Message</label>
           <textarea
+            id="message"
             name="message"
             placeholder="Write your message here . . ."
             autoComplete="off"
