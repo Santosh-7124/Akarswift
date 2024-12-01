@@ -911,9 +911,7 @@ header nav .active-nav-link:hover {
 }
 
 .why-work-with-us-heading img {
-  width: 120.948px;
-  height: 113.002px;
-  object-fit: none;
+object-fit: cover;
 }
 
 .why-work-with-us-container {
@@ -2553,6 +2551,12 @@ footer {
     font-weight: 500;
     line-height: normal;
   }
+
+   .why-work-with-us-heading img{
+    width: 120px;
+    height: 120px;
+    object-fit: none;
+   }
 
   .why-work-with-us-container {
     width: 100%;
